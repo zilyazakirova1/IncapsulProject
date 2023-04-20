@@ -1,12 +1,8 @@
 package ru.netology;
 
 public class Radio {
-    public int currentChannelNumber;
-    public int volume;
-
-    public int getCurrentChannelNumber() {
-        return currentChannelNumber;
-    }
+    private int currentChannelNumber;
+    private int volume;
 
     public void setCurrentChannelNumber(int newChannelNumber) {
         if (newChannelNumber < 0) {
@@ -18,6 +14,25 @@ public class Radio {
         currentChannelNumber = newChannelNumber;
     }
 
+    public int getCurrentChannelNumber() {
+        return currentChannelNumber;
+    }
+
+    public void setVolume(int newVolume) {
+        if (newVolume < 0) {
+            volume = 0;
+            return;
+        }
+        if (newVolume > 100) {
+            volume = 100;
+            return;
+        }
+        volume = newVolume;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
 
     public void next() {
         if (currentChannelNumber == 9) {

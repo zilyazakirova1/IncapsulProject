@@ -9,14 +9,14 @@ public class Radio {
     }
 
     public void setCurrentChannelNumber(int newChannelNumber) {
-        if (newChannelNumber < 0 ) {
+        if (newChannelNumber < 0) {
             return;
         }
-            if (newChannelNumber > 9){
-                return;
-            }
-            currentChannelNumber = newChannelNumber;
+        if (newChannelNumber > 9) {
+            return;
         }
+        currentChannelNumber = newChannelNumber;
+    }
 
 
     public void next() {

@@ -1,11 +1,12 @@
 package ru.netology;
 
 public class Radio {
-    private int currentChannelNumber;
+
     private int volume;
-    private int channelCount = 10;
-    private int maxChannel = 9;
-    private int minChannel = 0;
+    private int channelCount;// = 10;
+    private int maxChannel;// = 9;
+    private int minChannel;// = 0;
+    private int currentChannelNumber=0;//minChannel;
 
     public Radio(int channelCount, int maxChannel, int minChannel, int currentChannelNumber, int volume) {
         this.channelCount = channelCount;
@@ -69,13 +70,14 @@ public class Radio {
     public void increaseVolume() {
         if (volume < 100) {
             volume = volume + 1;
-        }
+        } else
+        volume=100;
     }
 
     public void decreaseVolume() {
         if (volume > 0) {
             volume = volume - 1;
-        }
+        } else volume=0;
     }
 }
 

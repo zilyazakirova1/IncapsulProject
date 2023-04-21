@@ -6,12 +6,11 @@ import org.junit.jupiter.api.Test;
 public class RadioTest {
     @Test
     public void shouldChangeChannelToNext() {
-        Radio rad = new Radio();
-        rad.setCurrentChannelNumber(7);
-        int expected = 8;
+        Radio rad = new Radio(10, 9, 0, 7, 50);
+        //  rad.setCurrentChannelNumber(7);
+        //   int expected = 8;
         rad.next();
-        int actual = rad.getCurrentChannelNumber();
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(8, rad.getCurrentChannelNumber());
     }
 
     @Test

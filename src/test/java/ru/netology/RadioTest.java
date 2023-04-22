@@ -5,6 +5,15 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
     @Test
+    public void shouldCheckoutChannelCount(){
+        Radio rad=new Radio(9);
+        Assertions.assertEquals(0,rad.getCurrentChannelNumber());
+        Assertions.assertEquals(9,rad.getMaxChannel());
+        Assertions.assertEquals(0,rad.getMinChannel());
+    }
+
+
+    @Test
     public void shouldChangeChannelToNext() {
         Radio rad = new Radio(10, 9, 0, 7, 0, 100, 50);
         rad.next();
@@ -22,7 +31,7 @@ public class RadioTest {
     public void shouldChangeChannelToNextIfMinus() {
         Radio rad = new Radio(10, 9, 0, -12, 0, 100, 50);
         rad.setCurrentChannelNumber(-12);
-        Assertions.assertEquals(0, rad.getCurrentChannelNumber());
+        Assertions.assertEquals(9, rad.getCurrentChannelNumber());
     }
 
     @Test
@@ -92,7 +101,6 @@ public class RadioTest {
         rad.setCurrentVolume(-7);
         Assertions.assertEquals(0, rad.getCurrentVolume());
     }
-
 
 }
 

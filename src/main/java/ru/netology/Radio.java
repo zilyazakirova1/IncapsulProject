@@ -21,21 +21,31 @@ public class Radio {
 
     }
 
-    public Radio() {
-        //    maxChannel=10;
+    public Radio(int size) {
+        maxChannel=minChannel+size;
     }
 
     public void setCurrentChannelNumber(int newChannelNumber) {
         if (newChannelNumber < minChannel) {
+            currentChannelNumber=9;
             return ;
         }
         if (newChannelNumber > maxChannel) {
+            currentChannelNumber=0;
             return;
         }
         currentChannelNumber = newChannelNumber;
     }
 
    public int getCurrentChannelNumber(){return currentChannelNumber;}
+    public int getMaxChannel(){
+        int getMaxChannel;
+        return maxChannel;
+    }
+    public int getMinChannel(){
+        int getMinCannel;
+        return minChannel;
+    }
 
     public void setCurrentVolume(int newVolume) {
         if (newVolume < 0) {
@@ -83,4 +93,3 @@ public class Radio {
     }
 }
 
-/**/

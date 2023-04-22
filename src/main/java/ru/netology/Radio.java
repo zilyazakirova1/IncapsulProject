@@ -15,16 +15,6 @@ public class Radio {
         this.maxChannel = channelCount - 1;
     }
 
-    //  public Radio(int channelCount, int maxChannel, int minChannel, int currentChannelNumber, int minVolume,int maxVolume,int currentVolume) {
-    //      this.channelCount = channelCount;
-    //      this.maxChannel = maxChannel;
-    //      this.minChannel = minChannel;
-    //      this.currentChannelNumber = currentChannelNumber;
-    //     this.minVolume = minVolume;
-    //      this.maxVolume=maxVolume;
-    //      this.currentVolume=currentVolume;
-
-    //  }
 
     public Radio() {
         this.channelCount = 10;

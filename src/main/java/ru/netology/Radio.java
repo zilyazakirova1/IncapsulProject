@@ -37,7 +37,7 @@ public class Radio {
 
    public int getCurrentChannelNumber(){return currentChannelNumber;}
 
-    public void setVolume(int newVolume) {
+    public void setCurrentVolume(int newVolume) {
         if (newVolume < 0) {
             currentVolume = 0;
             return;
@@ -49,7 +49,7 @@ public class Radio {
         currentVolume = newVolume;
     }
 
-    public int getVolume() {
+    public int getCurrentVolume() {
         return currentVolume;
     }
 
